@@ -1,1 +1,226 @@
+ (or any of the parent directories): .git 
+ Development:
+  working-area    staging-area  localRepo  remoteRepo[github]  
+  dev-starts      
+    test.sh --->   git add      git commit   git push                      
+     red             green  
+  git add . 
+  git add *  
+  git add filename  
+  git commit -m "my first commit"  
+  git log     
+
+ configure git global user's details:
+ ==================================== 
+git config --global user.name "Simon Legah"
+git config --global user.email "legah2000@gmail.com"
+git config --global --list
+
+git commit -m "my first commit"  
+git commit -m "db connection" 
+git log 
+vi deploy.py
+# Deploying a python web application
+echo "Hello World"   = shell scripts    
+print('Hello World') = python script  
+
+git commit -m "tools added" 
+
+[simon@dev visa]$ git status
+On branch master
+nothing to commit, working tree clean
+[simon@dev visa]$
+
+ git show commit-ID  
+ git show 2a508f6
+
+modified:   deploy.py 
+  git add . && git commit -m " version2"  
+    or 
+  git commit -a -m "deployment updated" 
+new files:  app.java
+----
+Project remote repository in GitHub:
+  https://github.com/landmarktech29/visa 
+
+===
+git remote add AliasName repoName  
+git remote add olu  Olusegun Jacobs 
+git remote add dady Olusegun Jacobs    
+
+git remote add vs https://github.com/landmarktech29/visa 
+
+https://github.com/landmarktech29/visa 
+
+VERIFY:
+  git remote -v  
+DNS:
+==============================
+When we run "git commit" the code is  
+  moved to the Local repository
+
+git push  -- moves code from localRepo
+             to Remote-Repo in GitHub/GitLab
+
+git push AliasName branchName     
+git push vs master  
+
+Administration and security  
+========================== 
+ Username for 'https://github.com': Lucbuea  
+ password for 'https://github.com': admin123  
+ Personal access token:
+  ghp_2a7*************5rwWX5ZWpjYn4Cogtpe1MYN9J
+----
+
+Running notes - Git 2b & 3 videos:
+==================================
+ working area        staging     localRepo     RemoteRepo[GitHub]    :
+  -----------        -------      ---------     ------------------  
+  Untracked files     git add     git commit    git push 
+    red                green     
+             
+git fetch                           <-------------------
+git merge    
+git pull <------------------------------------------------------
+ 
+git init          = to initialised a git empty repository
+git status        = to track files location
+git log           
+git add           = move files to staging area from working area
+git commit -m     = move files to the local repository FROM STAGING AREA
+                    good commit message for tracking changes/authors 
+
+git commit -m "users list created"
+git push RemoteRepo master 
+
+https://github.com/landmarkdevops28/tesla 
+CREATE AN AliasName FOR THE Remote-Repo
+git remote add AliasName 
+git remote add tesla https://github.com/landmarkdevops28/tesla
+git remote add tt https://github.com/landmarkdevops28/tesla 
+git remote add ta https://github.com/landmarkdevops28/tesla 
+https://github.com/landmarkdevops28/tesla 
+
+git remote -v 
+git push ta master 
+ 
+ git pull ta master
+ git fetch ta master
+
+simon
+   app.py  
+   git pull    
+Paul 
+   app.py and modifies this file    
+
+git diff ta/master 
+
+git merge  ta/master 
+
+ ta/master
+===============
+IDEs – Integrated Development Environment  : 
+    Eclipse  -  open source Java BASED IDE
+    MyEclipse - not
+    NetBeans  OS Heavy
+    Intellij - not
+     Front – End 
+            VS Code
+            Atom 
+   pycharm
+mkdir tesla
+
+     .classpath
+    .project
+    node_modules
+what is .gitignore file use for??
+  This records files and dirs that shouldn.t be tracked by git  
+touch .classpath .project  && mkdir node_modules  
+Does this also work for any other file that we don't want git to track? YES. 
+
+git commit -m ".gitignore file created"
+
+================= 
+Which Atlassian tools have you used in your project?  :
+---------------------------------------------------
+    BitBucket  ---> scm          = GitHub
+    Bamboo --> CI/CD             = Jenkins 
+    Jira -->  Ticketing tool =
+    Confluence  --> Documentation  
+---->   
+
+IQ: How many branches are you supporting?
+
+   TD BANK  = github
+
+   https://github.com/myLandmark-Technology/td.git
+
+     git remote add td https://github.com/myLandmark-Technology/td.git
+
+  private or public 
+  
+  git fetch --> It brings changes in the code to the LocalRepo
+  git pull --> It brings changes in the code to the Working area 
+  git clone --> It brings the entire code to the working area 
+
+    use to merge changes on the RemoteRepo with the localRepo
+
+IQ: How many branches are you supporting in your projects?
+    Branches are used to create lines of development. 
+    A branch is a line development 
+  We maintain a minimun of 3 branches:
+        development branch  
+           app.java     
+        staging branch  
+           app.java
+        master branch  
+           app.java
+
+  git branch  = list all the branches [lines of development]
+  git branch branchName  = create a new branch     
+  git checkout branchName = switch branches 
+
+git commit -a -m "dev env deployment"
+git commit -a -m "master deployment"
+ 
+  git merge dev -m "merging" 
+  CONFLICT 
+dev
+   dc1-->dc2  
+master 
+   mc1---mc2  
+  git merge = CONFLICT will occur 
+              resolve manually [vi into the affected files ]
+             
+
+dev
+   dc1-->dc2  
+master 
+   git diff and git merge   
+   mc1---mc2 
+
+IQ: How many environments are you supporting in your projects?
+Environment:
+    development branch deploying to Development ENV 
+    testing branch deploys to  Testing ENV
+    testing branch deploys to  UAT(QA, BA)   ENV
+    MASTER branch code are deployed to  Production
+ 
+  Branches are used to create lines of development. 
+  A branch is a line development 
+
+
+
+    td 
+
+  development branch 
+git diff development --> shows differences 
+
+   git merge --> merges differences
+
+   git merge development -m "Changes Reviewed ok"
+
+   git commit -a -m "readme ready for testing"
+
 
